@@ -1,0 +1,36 @@
+tr th:nth-child(1), tr th:nth-child(2) 
+{
+	border-right: 1px solid orange !important;
+}
+
+tr td:first-child
+{
+    width: 5%;
+	border-right: 1px solid orange !important; 
+}
+
+tr td:nth-child(2)
+{
+	border-right: 1px solid orange !important; 
+}
+
+tr td:last-child
+{
+    width: 15%;
+}
+
+.deleteButton
+{
+	background: whitesmoke;
+	border: none;
+	color: red;
+	transition: 2s;
+}
+
+.deleteButton:hover
+{
+	background: red;
+	border: none;
+	color: whitesmoke;
+	transition: 2s;
+}
