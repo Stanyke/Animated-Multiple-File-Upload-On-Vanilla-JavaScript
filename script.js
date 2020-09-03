@@ -1,22 +1,23 @@
 formNewInput = () =>
 {
-	let allInputFields = document.querySelectorAll('input[type="file"]');
+	let allInputFields = document.querySelectorAll('input[type="file"]'); // Get all input fields with attribute type: file
 	
-	if(allInputFields.length > 0)
+	if(allInputFields.length > 0) // Check if input fields gotten is greather than zero
 	{
-		let lastInputField = allInputFields[allInputFields.length - 1];
-		var totalInputsAvailable = lastInputField.id;
+		let lastInputField = allInputFields[allInputFields.length - 1]; // Get the last input field available
+		var totalInputsAvailable = lastInputField.id; // Get the id value of the last input field available
 		
-		totalInputsAvailable++;
+		totalInputsAvailable++; // Add an extra number to the id value of the last input field available
 	}
-	else
+	else // Check if input fields gotten is less than zero
 	{
-		var totalInputsAvailable = 1;
+		var totalInputsAvailable = 1; // Give the total number of inputs available equals 1, since all has been cleared/deleted by user
 	}
     
 	
 	// Create tr
 	let tr = document.createElement('tr');
+	tr.setAttribute('class', 'animate__animated animate__zoomInDown'); // Add animation to this newly added tr
 	
 	// Create td For Serial Number In Span
 	let tdForSpan = document.createElement('td');
@@ -70,6 +71,11 @@ formNewInput = () =>
 	tdForDeleteButton.appendChild(tdDeleteButton); // Add delete button into td for delete
 	tdDeleteButton.appendChild(deleteButtonIcon); // Add delete button fa fa icon into delete button
 	tdDeleteButton.appendChild(deleteText); // Add delete text beside delete button icon
+	
+	setTimeout( () =>
+	{
+		tr.setAttribute('class', ''); // Remove animation from this newly added tr after 1second of animation taking it's time to display, so to avoid deleting animation not working
+	}, 1000);
 }
 
 
