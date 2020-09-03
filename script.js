@@ -33,7 +33,7 @@ formNewInput = () =>
 	let input = document.createElement('input');
     input.type = "file";
     input.setAttribute('id', totalInputsAvailable);
-    input.setAttribute('class', 'form-control');
+    input.setAttribute('class', 'form-control-file border');
     input.setAttribute('name', 'upload[]');
 	
 	// Create td For Delete Button
