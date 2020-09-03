@@ -15,7 +15,7 @@
 <body>
 
 <div class="container" style="margin-top: 100px;">
-  <h2 class="mb-4" align="center">Multiple File Upload Using Vanilla JavaScript</h2>
+  <h2 class="mb-4 animate__animated animate__bounce" align="center">Multiple File Upload Using Vanilla JavaScript</h2>
 
   <center class="mb-2"><button class="btn btn-success" onclick="formNewInput()">Add New File</button></center>
   
