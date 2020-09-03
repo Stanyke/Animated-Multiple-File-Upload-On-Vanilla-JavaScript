@@ -1,10 +1,19 @@
 formNewInput = () =>
 {
 	let allInputFields = document.querySelectorAll('input[type="file"]');
-    let lastInputField = allInputFields[allInputFields.length - 1];
-	var totalInputsAvailable = lastInputField.id;
 	
-    totalInputsAvailable++;
+	if(allInputFields.length > 0)
+	{
+		let lastInputField = allInputFields[allInputFields.length - 1];
+		var totalInputsAvailable = lastInputField.id;
+		
+		totalInputsAvailable++;
+	}
+	else
+	{
+		var totalInputsAvailable = 1;
+	}
+    
 	
 	// Create tr
 	let tr = document.createElement('tr');
@@ -68,5 +77,11 @@ formNewInput = () =>
 deleteField = (e) =>
 {
 	var p = e.parentNode.parentNode;
-    p.parentNode.removeChild(p);
+	if(p.className += ' animate__animated animate__backOutDown')
+	{
+		setTimeout( () =>
+		{
+			p.parentNode.removeChild(p);
+		}, 500);
+	}
 }
